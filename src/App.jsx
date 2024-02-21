@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../src/pages/home';
 import './App.css';
-import Edit from './components/edit';
-import MyCard from './components/myCard';
+import EditProduct from './pages/home/editProduct/editProduct';
+import CreatePdt from './pages/home/createpdt/create';
+
 
 function App() {
 
@@ -11,8 +12,8 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/edit' element={<Edit/>} />
-        <Route path='/shoppingCard' element={<MyCard />} />
+        <Route path='/edit/:id' element={<EditProduct/>} />
+        <Route path='/createpdt' element={<CreatePdt />} />
       </Routes>
     </BrowserRouter>
    

@@ -11,7 +11,6 @@ h2 {
 .product-card { 
     background-color: beige;
     padding: 80px 80px 80px 150px;
-    margin-top: 50px;
 }
 
 .editForm{
@@ -23,9 +22,6 @@ h2 {
     width:80%;
  
 }
-/* .mainLeft img{
-    padding: 30px 350px;
-} */
 
 .productInfo label .formArticles label {
     color: white;
