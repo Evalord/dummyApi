@@ -1,47 +1,116 @@
 #root {
-    height: 100vh;
     width: 100%;
+
+}
+
+.addContainer {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 2rem 0rem;
+}
+
+section {
+    margin-bottom: 50px;
 }
 
 h2 {
- text-align: center;
-
+    text-align: center;
 }
 
-.product-card { 
-    background-color: beige;
-    padding: 80px 80px 80px 150px;
-}
-
-.editForm{
+form {
+    margin-top: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    padding: 40px;
-    width:80%;
- 
+    flex-direction: row-reverse;
+    justify-content: space-around;
 }
 
-.productInfo label .formArticles label {
-    color: white;
- }
- 
- .formArticles input,
- .productInfo input,.productInfo textarea {
-     width: 80%;
-     height: 30px;
-     border-radius: 5px;
- }
- 
+.storeImage {
+    background: url(/src/assets/background1.jpg);
+    width: 50%;
+    margin: 0px;
+    background-size: cover;
+}
+
+.createForm {
+
+    width: 50vw;
+    align-content: center;
+
+}
+
+.createProductInfo {
+    padding: 0px;
+    margin: 0px;
+    width: 80%;
+}
+
+.createProductInfo label {
+    font-size: 18px;
+}
+
+.createProductInfo input,
+.createProductInfo textarea {
+
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.createProductInfo textarea {
+    height: 100px;
+}
 
 .btn-submit button {
-    background-color:#04bfbf;
+    background-color: #04bfbf;
     color: white;
     width: 80%;
     height: 50px;
-    margin-top: 10px;
-    border-radius: 7px;
+    margin-top: 20px;
+    border-radius: 5px;
     font-weight: bold;
-    font-size: medium;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 640px) {
+
+    .addContainer {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 2rem 0rem;
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+
+    form {
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .storeImage {
+        width: 100%;
+        height: 50vh;
+
+    }
+
+    .createForm {
+        margin-top: 30px;
+        width: 100%;
+        padding: 10px;
+
+    }
+
+    .createProductInfo {
+        width: 100%;
+    }
+
+    .btn-submit button {
+        width: 100%;
+
+    }
 }

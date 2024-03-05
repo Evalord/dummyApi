@@ -4,11 +4,10 @@ import './create.css';
 const CreatePdt = () => {
 
     return (
-        <>
+        <div className="addContainer">
             <Navbar />
             <AddProduct />
-            
-        </>
+        </div>
     )
 }
 export default CreatePdt;

@@ -30,7 +30,7 @@ const AddProduct = () => {
 
     const [errorMessage, setErrorMessage] = useState();
     const [showButton, setShowButton] = useState(true);
-    
+
     const [state, setState] = useState({
         image: "",
         title: "",
@@ -52,7 +52,7 @@ const AddProduct = () => {
 
     const submitProduct = (values) => {
         console.log(values);
-        values.preventDefault();
+        // values.preventDefault();
         const userData = {
             image: state.image[0],
             title: state.title,
@@ -86,77 +86,61 @@ const AddProduct = () => {
     }
 
     return (
-
-        <>
-
+        <div>
+            <h2> Add New Products </h2>
             <form onSubmit={handleSubmit(submitProduct)}>
+
+                <div className="storeImage"></div>
                 <ToastContainer />
-                <div className="product-card">
-                <h2> Add New Products </h2> 
+                <div className="editProduct-card">
+
                     <div className="error-Message">{errorMessage} </div>
-                    <div className="editForm">
-                        <div className="mainLeft">
-                            <div>
-                                <label htmlFor="image">Add Image</label>
-                            </div>
-                            <div>
-                                <input {...register('image')} id='image' type="file" name="image" value={state.image} onChange={handleChange} />
-                            </div>
-                        </div>
+                    <div className="createForm">
+
                         <div className="mainRight">
-                            <div className='productInfo'>
+                            <div className='createProductInfo'>
                                 <div>
                                     <label htmlFor="title"> Arcticle Title</label>
-                                </div>
-                                <div>
                                     <input id='title' {...register('title')} type="text" placeholder="e.g iphone 9 " name="title" title="insert article tilte" value={state.title} onChange={handleChange} />
 
                                 </div>
 
                                 <div>
                                     <label htmlFor="price"> Arcticle Price</label>
-                                </div>
-                                <div>
                                     <input id='price' {...register('price')} type="number" placeholder="e.g 125" name="price" title="insert article price" value={state.price} onChange={handleChange} />
                                 </div>
                                 <div>
                                     <label htmlFor="stock"> Stock</label>
-                                </div>
-                                <div>
                                     <input id='stock'{...register('stock')} type="number" placeholder="e.g 20" name="stock" title="insert stock available" value={state.stock} onChange={handleChange} />
                                 </div>
 
                                 <div>
                                     <label htmlFor="discountPercentage"> Arcticle Discount</label>
-                                </div>
-                                <div>
                                     <input id='discountPercentage' {...register('discountPercentage')} type="number" placeholder="e.g 12" name="discountPercentage" title="insert article discount percentage" value={state.discountPercentage} onChange={handleChange} />
                                 </div>
 
                                 <div>
                                     <label htmlFor="rating"> Arcticle Rating</label>
-                                </div>
-                                <div>
                                     <input id='rating'{...register('rating')} type="number" placeholder="e.g 3" name="rating" title="insert article rating" value={state.rating} onChange={handleChange} />
                                 </div>
                                 <div>
                                     <label htmlFor="brand"> Brand</label>
-                                </div>
-                                <div>
                                     <input id='brand'{...register('brand')} type="string" placeholder="e.g zara" name="brand" title="insert article Brand" value={state.brand} onChange={handleChange} />
                                 </div>
 
                                 <div>
                                     <label htmlFor="category"> Arcticle category</label>
-                                </div>
-                                <div>
                                     <input id='category'{...register('category')} type="string" placeholder="e.g raincoat" name="category" title="insert article category" value={state.category} onChange={handleChange} />
                                 </div>
                                 <div>
                                     <label htmlFor="description"> Description</label>
-                                </div>
-                                <div>
                                     <textarea id='description'{...register('description')} type="text" title="insert article description" value={state.description} onChange={handleChange} />
+                                </div>
+                            </div>
+                            <div className="mainLeft">
+                                <div>
+                                    {/* <label htmlFor="image">Add Image</label> */}
+                                    <input {...register('image')} id='image' type="file" name="image" value={state.image} onChange={handleChange} />
                                 </div>
                             </div>
                             <div className="btn-submit">
@@ -169,8 +153,8 @@ const AddProduct = () => {
                     </div>
                 </div>
             </form>
+        </div>
 
-        </>
     )
 }
 export default AddProduct;

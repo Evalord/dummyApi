@@ -83,7 +83,7 @@ const Main = () => {
                                         </div>
                                         <p className="product-price">Price: {product.price}$</p>
                                     </div>
-                                    <div className="button">
+                                    <div className="productButton">
                                         <button type='submit' className="delete-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
                                         <button type='submit' className="edit-btn" onClick={() => navigate(`/edit/${product.id}`)}>Edit</button>
                                     </div>

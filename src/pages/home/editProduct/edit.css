@@ -3,46 +3,77 @@
     width: 100%;
 }
 
+.editContainer {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 2rem 0rem;
+}
+
 h2 {
- text-align: center;
-
+    text-align: center;
 }
 
-.product-card { 
-    background-color: beige;
-    padding: 80px 80px 80px 150px;
-    margin-top: 50px;
-}
-
-.editForm{
+.product-card {
+    background-color: rgb(230, 230, 218);
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+}
+
+.editForm {
+    align-self: center;
     width: 50%;
     padding: 40px;
-    width:80%;
- 
+}
+
+.editMainLeft img {
+    width: 100%;
+}
+
+.productInfo {
+    width: 100%;
+    margin-top: 25px;
 }
 
 .productInfo label .formArticles label {
     color: white;
- }
- 
- .formArticles input,
- .productInfo input,.productInfo textarea {
-     width: 80%;
-     height: 30px;
-     border-radius: 5px;
- }
- 
+}
 
-.btn-submit button {
-    background-color:#04bfbf;
+
+.productInfo input,
+.productInfo textarea {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 0.5rem;
+}
+
+.productInfo textarea {
+    height: 100px;
+}
+
+
+.edit-submit button {
+    background-color: #04bfbf;
     color: white;
-    width: 80%;
+    width: 100%;
     height: 50px;
-    margin-top: 10px;
-    border-radius: 7px;
+    margin-top: 20px;
+    border-radius: 5px;
     font-weight: bold;
-    font-size: medium;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 640px) {
+    .product-card {
+        background-color: rgb(230, 230, 218);
+        width: 100%;
+    }
+
+    .editForm {
+        align-self: center;
+        width: 100%;
+    }
+
 }

@@ -27,7 +27,7 @@ const Edit = () => {
     });
     const searchParams = useParams()
     console.log(searchParams.id)
-    
+
     const getProduct = () => {
         axios.get(`https://dummyjson.com/products/${searchParams.id}`)
             .then((response) => {
@@ -79,66 +79,54 @@ const Edit = () => {
 
     return (
         <>
+            <div>
+                <h2> Edit Product </h2>
+            </div>
             <form onSubmit={handleSubmit(editProduct)}>
                 <ToastContainer />
                 <div className="product-card" key={product?.id}>
-                    <h2> Edit Product </h2>
+
                     <div className="error-Message">{errorMessage} </div>
                     <div className="editForm" type="datalist" key={searchParams.id}>
-                        <div className="mainLeft">
+                        <div className="editMainLeft">
                             <img src={product?.images[0]} />
                         </div>
                         <div className="mainRight">
                             <div className='productInfo'>
                                 <div>
                                     <label htmlFor="name"> Arcticle Name</label>
-                                </div>
-                                <div>
                                     <input id='name'{...register('name')} type="text" placeholder={product?.title} name="name" title="insert article name" />
-
                                 </div>
 
                                 <div>
                                     <label htmlFor="price"> Arcticle Price</label>
-                                </div>
-                                <div>
                                     <input id='price' {...register('price')} type="number" placeholder={product?.price} name="price" title="insert article price" />
                                 </div>
                                 <div>
                                     <label htmlFor="stock"> Stock</label>
-                                </div>
-                                <div>
                                     <input id='stock' {...register('stock')} type="number" placeholder={product?.stock} name="stock" title="insert stock available" />
                                 </div>
 
                                 <div>
                                     <label htmlFor="discountPercentage"> Arcticle Discount</label>
-                                </div>
-                                <div>
                                     <input id='discountPercentage' {...register('discountPercentage')} type="number" placeholder={product?.discountPercentage} name="discount" title="insert article discount percentage" />
                                 </div>
 
                                 <div>
                                     <label htmlFor="rating"> Arcticle Rating</label>
-                                </div>
-                                <div>
                                     <input id='rating' {...register('rating')} type="number" placeholder={product?.rating} name="rating" title="insert article rating" />
                                 </div>
 
                                 <div>
                                     <label htmlFor="category"> Arcticle category</label>
-                                </div>
-                                <div>
                                     <input id='category' {...register('category')} type="string" placeholder={product?.category} name="category" title="insert article category" />
                                 </div>
                                 <div>
                                     <label htmlFor="description"> Arcticle description</label>
-                                </div>
-                                <div>
                                     <textarea id='description' {...register('description')} type="string" placeholder={product?.description} name="category" title="insert article description" />
                                 </div>
                             </div>
-                            <div className="btn-submit">
+                            <div className="edit-submit">
                                 <button type="submit">
                                     {showButton === false && <div className='attente'>editing...</div>}
                                     {showButton === true && <>save</>}

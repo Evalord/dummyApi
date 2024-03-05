@@ -4,11 +4,11 @@ import './edit.css'
 const EditProduct = () => {
 
     return (
-        <>
+        <div className="editContainer">
             <Navbar />
-            <Edit/>
-            
-        </>
+            <Edit />
+
+        </div>
     )
 }
 export default EditProduct;
