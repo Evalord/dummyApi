@@ -46,9 +46,9 @@ const Main = () => {
         const value = e.target.value
         console.log(value)
         product.get(`/search?q=${value}`)
-        .then((response) => {
-            setProducts(response?.data?.products)
-        })
+            .then((response) => {
+                setProducts(response?.data?.products)
+            })
     }
 
     return (
@@ -70,12 +70,7 @@ const Main = () => {
                                 <div className='content'>
                                     <div className="articlesInfo" key={product.id}>
                                         <div className="productImages">
-                                            {/* {product.images.map((image) => {
-                                                return <img src={image} alt="" />
-                                            })
-                                            } */}
                                             <img src={product.images[0]} alt="" />
-
                                         </div>
                                         <h4 className="product-title">{product.title}</h4>
                                         <p className="">{product.description}</p>

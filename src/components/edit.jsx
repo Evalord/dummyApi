@@ -10,7 +10,6 @@ import * as yup from "yup"
 const Edit = () => {
 
     const schema = yup.object().shape({
-        // image: yup.any().image().required("image is required"),
         name: yup.string().required("Product Name is required"),
         price: yup.string().matches().required("Poduct price is required")
     }).required()
@@ -28,10 +27,7 @@ const Edit = () => {
     });
     const searchParams = useParams()
     console.log(searchParams.id)
-    // const client = axios.create({
-    //     baseURL: 'https://dummyjson.com/products'
-    // });
-
+    
     const getProduct = () => {
         axios.get(`https://dummyjson.com/products/${searchParams.id}`)
             .then((response) => {
@@ -43,7 +39,6 @@ const Edit = () => {
                 setValue("description", response?.data?.description)
                 setValue("stock", response?.data?.stock)
                 setValue("discountPercentage", response?.data?.discountPercentage)
-                // console.log(response)
             }).catch((error) => {
                 console.log()
             });

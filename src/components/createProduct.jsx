@@ -24,14 +24,13 @@ const AddProduct = () => {
     const {
         register,
         handleSubmit,
-        // formState: { errors },
     } = useForm({
         resolver: yupResolver(schema)
     });
 
     const [errorMessage, setErrorMessage] = useState();
     const [showButton, setShowButton] = useState(true);
-    // const [image, setImage] = useState();
+    
     const [state, setState] = useState({
         image: "",
         title: "",
@@ -68,10 +67,6 @@ const AddProduct = () => {
         }
         setShowButton(false)
         setErrorMessage('')
-
-        // const formData = new FormData()
-        // formData.append("file", image)
-        // let link = ''
 
         axios.post('https://dummyjson.com/products/add', userData)
             .then(response => {
