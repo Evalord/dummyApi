@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
+import reactRefresh from '@vitejs/plugin-react'
+import {nodeResolve} from '@rollup/plugin-node-resolve'
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [reactRefresh(),nodeResolve()],
   build: {
     rollupOptions: {
-      external: ['axios'],
+      external: ['bootstrap/dist/js/bootstrap.bundle.min'],
     },
   },
 });
