@@ -70,8 +70,9 @@ const Main = () => {
                                 <div className='content'>
                                     <div className="articlesInfo" key={product.id}>
                                         <div className="productImages">
-                                            <img className='h-100 object-contain' src={product.images[0]} alt="" />
+                                            <img src={product.images[0]} alt="" />
                                         </div>
+                                        <div>
                                         <h4 className="product-title">{product.title}</h4>
                                         <p className="">{product.description}</p>
                                         <div className='detail'>
@@ -79,6 +80,7 @@ const Main = () => {
                                             <p className="product-discountPercentage">Discount: {product.discountPercentage}%</p>
                                         </div>
                                         <p className="product-price">Price: {product.price}$</p>
+                                    </div>
                                     </div>
                                     <div className="productButton">
                                         <button type='submit' className="delete-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
