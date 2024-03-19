@@ -70,14 +70,11 @@ const Main = () => {
                                 <div className='content'>
                                     <div className="articlesInfo" key={product.id}>
                                         <div className="productImages">
-                                            <img src={product.images[0]} alt="" />
+                                            <img className='h-100 object-contain' src={product.images[0]} alt="" />
                                         </div>
                                         <h4 className="product-title">{product.title}</h4>
                                         <p className="">{product.description}</p>
-                                        <p className="product-category">Category: {product.category}</p>
                                         <div className='detail'>
-                                            <p className="product-brand">Brand: {product.brand}</p>
-                                            <p className="">{product.stock} in stock</p>
                                             <p className="product-rate">Rate: {product.rating}</p>
                                             <p className="product-discountPercentage">Discount: {product.discountPercentage}%</p>
                                         </div>

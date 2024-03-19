@@ -62,7 +62,7 @@
 
 .menuitem {
     margin-top: 1vh;
-    padding: 3% 3% 3% 3%;
+    padding:2%;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.58);
     color: white;
@@ -212,7 +212,8 @@ h3 {
 
 .productImages img {
     width: 250px;
-    height: 30vh;
+    height: 150px;
+    object-fit: contain;
     margin: 0 auto;
 
 }
